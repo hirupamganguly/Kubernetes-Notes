@@ -1,5 +1,44 @@
 # Kubernetes-Notes
 
+## Bash Commands of Master VM - 4 core CPU 2GB Ram
+
+```bash
+  9  sudo apt-get update
+   10  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+   11  docker version
+   12  sudo cat /sys/class/dmi/id/product_uuid
+   13  sudo apt-get update
+   14  sudo apt-get install -y apt-transport-https ca-certificates curl
+   15  sudo curl -fsSLo /etc/apt/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
+   16  echo "deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+   17  sudo apt-get update
+   18  sudo apt-get install -y kubelet kubeadm kubectl
+   19  sudo apt-mark hold kubelet kubeadm kubectl
+   20  kubeadm init --pod-network-cidr=10.244.0.0/16
+   21  kubeadm init
+   22  systemctl status docker
+   23  rm /etc/containerd/config.toml
+   24  systemctl restart containerd
+   25  kubeadm init --pod-network-cidr=10.244.0.0/16
+   26  kubectl get nodes
+   27  kubeadm join 192.168.25.4:6443 --token pmgueq.ltwr44w1m6imhmzm \
+   28  kubectl get pods
+   29  kubectl get pods -a
+   30  kubectl get pods -A
+   31  kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
+   32  kubectl get pods -A
+   33  kubectl get nodes
+   34  exit
+   35  kubectl get nodes
+   36  clear
+   37  kubectl ge nodes
+   38  clear
+   39  kubectl get nodes
+   40  history >terminalhistory.txt
+
+```
+
+
 ## PODS :- 
 
 ![1pod](https://user-images.githubusercontent.com/77056200/215839019-ead24552-dbac-4d37-ab8e-c024be1643b1.png)
