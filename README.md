@@ -3,14 +3,14 @@
 ## Bash Commands of Master VM - 4 core CPU 2GB Ram
 
 ```bash
-  sudo apt-get update
-  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
-  docker version
-  sudo cat /sys/class/dmi/id/product_uuid
-  sudo apt-get update
-  sudo apt-get install -y apt-transport-https ca-certificates curl
-  sudo curl -fsSLo /etc/apt/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
-  echo "deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+   sudo apt-get update
+   sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+   docker version
+   sudo cat /sys/class/dmi/id/product_uuid
+   sudo apt-get update
+   sudo apt-get install -y apt-transport-https ca-certificates curl
+   sudo curl -fsSLo /etc/apt/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
+   echo "deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
    sudo apt-get update
    sudo apt-get install -y kubelet kubeadm kubectl
    sudo apt-mark hold kubelet kubeadm kubectl
@@ -23,7 +23,6 @@
    kubectl get nodes
    kubeadm join 192.168.25.4:6443 --token pmgueq.ltwr44w1m6imhmzm \
    kubectl get pods
-   kubectl get pods -a
    kubectl get pods -A
    kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
    kubectl get pods -A
