@@ -37,7 +37,6 @@
    systemctl restart containerd
    kubeadm init --pod-network-cidr=10.244.0.0/16
    kubectl get nodes
-   kubeadm join 192.168.25.4:6443 --token pmgueq.ltwr44w1m6imhmzm \
    kubectl get pods
    kubectl get pods -A
    kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
