@@ -1199,7 +1199,7 @@ dump
 root@65578b4997ae:/home/Projects/mongodump# mongorestore 
 
 
-
+cp -r /nvim/nvim/ /root/.config/
 
 
 ```
